@@ -4,13 +4,16 @@ version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 authors = [{ name = "Kevin Fisher", email = "kfish610@gmail.com" }]
-requires-python = ">=3.14"
+requires-python = ">=3.12"
 dependencies = [
   "certifi>=2026.7.22",
+  "gdown>=6.4.2",
   "jupyter>=1.1.1",
   "matplotlib>=3.11.2",
   "notebook>=7.6.3",
   "numpy>=2.5.3",
+  "pip>=26.2.2",
+  "syncode>=0.4.16",
   "tensorboardx>=2.6.5",
   "torch>=2.14.0",
   "torchvision>=0.29.0",
@@ -28,6 +31,8 @@ torch = { index = "pytorch-xpu" }
 torchvision = { index = "pytorch-xpu" }
 triton-xpu = { index = "pytorch-xpu" }
 
+[tool.uv]
+environments = ["sys_platform == 'linux'"]
 
 [project.scripts]
 ccs521fa26hw = "ccs521fa26hw:main"
